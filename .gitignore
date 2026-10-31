@@ -1,0 +1,34 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local state and secrets
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.sqlite3-journal
+*.log
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Generated desktop/deployment outputs
+node_modules/
+dist/
+build/
+staticfiles/
+media/
+artifacts/
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

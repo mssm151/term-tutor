@@ -1,0 +1,2 @@
+# Backend scaffold only. Desktop/Pi dependencies belong to the future npm project.
+Django==5.2.18
