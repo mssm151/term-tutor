@@ -2,7 +2,7 @@
 
 本目录预留后续部署配置，不含已经验证的 Docker 或 K8s 部署清单。
 
-正式部署角色：一个 8 GB DDR3 控制平面、两个各 8 GB DDR3 Worker、独立 32 GB 数据机，四台使用 x86；业务 CPU 暂不指定。数据机采用 2×2 TB SSD RAID1 加 4×2 TB HDD RAID10（约 4 TB 可用），承载 MySQL、Qdrant、独立 CPU 嵌入、后台入库、资料与本机备份。
+正式部署角色：一个 16 GB DDR3 控制平面、两个各 16 GB DDR3 Worker、独立 64 GB 数据机，四台使用 x86；业务 CPU 暂不指定。数据机采用 2×2 TB SSD RAID1 加 4×2 TB HDD RAID10（约 4 TB 可用），承载 MySQL、Qdrant、独立 CPU 嵌入、后台入库、资料与本机备份。
 
 独立推理区可选原三套 T10 配置及 DGX Spark（双机/四机子配置）；整套为 5/6/8 台。Spark 每台 128 GB 统一内存，Arm CPU，配 DeepSeek-V4.1-Flash-1017；用户整套价格 8 万/16 万元。跨机互连、量化和 64k 模型能力仍需验证，见 [推理备选说明](../docs/推理服务器备选方案.md)。
 
