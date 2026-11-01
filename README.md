@@ -2,7 +2,22 @@
 
 面向学生的环境感知型命令行教学助手。产品设计为类似 MobaXterm 的桌面终端：中间由学生操作终端，右侧内置 Pi Agent 教学对话栏。
 
-**当前交付为 Git 仓库框架，不是完整产品。** Django 项目、APP、路由与占位视图已建立；桌面端、Pi、SSH、串口、RAG 和模型服务尚未接通。
+**现已提供可运行的单机 MVP，位于 [`mvp/`](mvp/README.md)。** 原有 Django 项目仍是框架；MVP 独立实现真实终端、教学助手、本地资料检索和学习记录。Electron/Pi 桌面集成及正式多机部署尚未完成。
+
+## 单机 MVP 体验
+
+在 PowerShell 7 中使用 Conda Python 启动，示例解释器路径按本机安装位置调整：
+
+```powershell
+& 'D:\anaconda\envs\py311\python.exe' -m pip install -r mvp/requirements.txt
+& 'D:\anaconda\envs\py311\python.exe' mvp/run.py
+```
+
+启动后访问 <http://127.0.0.1:8765>。学生在真实 PowerShell 中操作，右侧助手结合当前会话解释命令、分析报错并提供提示；课程进度、对话与资料出处保存在本机。未启用模型时使用明确标注的离线讲义提示。
+
+![TermTutor 单机 MVP 脱敏效果](assets/mvp-demo.png)
+
+上图为脱敏演示，终端和回答中的个人信息已替换为示例数据。支持本地会话，另有 SSH/串口连接入口；后两项尚未完成实机验收。使用步骤见 [MVP 使用说明](mvp/README.md)，运行效果和单流实测见 [MVP 实测报告](MVP_REPORT.md)。
 
 ## 功能与架构
 
@@ -23,6 +38,9 @@
 ├── README.md
 ├── Makefile
 ├── requirements.txt
+├── mvp/                         # 独立可运行单机版，见 mvp/README.md
+├── assets/mvp-demo.png           # 脱敏效果图
+├── MVP_REPORT.md                 # 运行效果与单流测速记录
 ├── backend/
 │   ├── manage.py
 │   ├── config/                  # Django Project / 根路由 / ASGI / WSGI
@@ -52,7 +70,7 @@
 
 本框架默认使用 SQLite，无需准备 MySQL、GPU、Docker 或 K8s。生产方案中的 MySQL/Qdrant 和模型部署属于后续实现。Electron/Pi 是未来 npm 依赖，不写入 Python 清单，也无需现在安装。
 
-## 快速开始
+## Django 框架快速开始
 
 以下命令在仓库根目录执行。Windows 使用明确的 Conda 解释器路径：
 

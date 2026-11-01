@@ -1,0 +1,24 @@
+data/
+.env
+__pycache__/
+*.log
+
+# Local design specification is intentionally excluded from the deliverable
+MVP_SPEC.md
+design/
+docs/
+
+# Extra local exports, connection credentials, and raw benchmark results
+exports/
+captures/
+.env.local
+known_hosts*
+*.pid
+*.sqlite3*
+*.sqlite
+*.db*
+*.pem
+*.key
+*.ppk
+*.p12
+*.pfx

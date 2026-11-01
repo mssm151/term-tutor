@@ -13,11 +13,51 @@ htmlcov/
 !.env.example
 *.sqlite3
 *.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
 *.log
+*.pid
 *.pem
 *.key
+*.ppk
+*.p12
+*.pfx
 id_rsa*
 id_ed25519*
+id_ecdsa*
+id_dsa*
+.ssh/
+known_hosts
+known_hosts.old
+credentials*.json
+secrets*.json
+service-account*.json
+token.json
+tokens.json
+cookies*.json
+
+# Raw session captures and clipboard images may contain personal information
+*.har
+*.cast
+codex-clipboard-*
+termtutor-*.json
+benchmark-result*.json
+benchmarks/raw/
+
+# Local model weights and caches are not application source
+*.gguf
+*.safetensors
+*.onnx
+*.pt
+*.pth
+.cache/
+.lmstudio/
+model_cache/
 
 # Generated desktop/deployment outputs
 node_modules/
@@ -33,3 +73,13 @@ artifacts/
 .DS_Store
 Thumbs.db
 docs/
+
+# Design documents stay local; usage and measured-result reports are publishable
+/mvp/MVP_SPEC.md
+/mvp/design/
+/mvp/docs/
+
+# Private MVP deployment configuration PDF and rendering intermediates
+/output/pdf/
+/tmp/pdfs/
+MVP_Local_Configuration*.pdf
