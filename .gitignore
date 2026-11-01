@@ -80,6 +80,7 @@ docs/
 /mvp/docs/
 
 # Private MVP deployment configuration PDF and rendering intermediates
+/MVP_REPORT.md
 /output/pdf/
 /tmp/pdfs/
 MVP_Local_Configuration*.pdf

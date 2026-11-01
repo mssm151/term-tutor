@@ -17,7 +17,7 @@
 
 ![TermTutor 单机 MVP 脱敏效果](assets/mvp-demo.png)
 
-上图为脱敏演示，终端和回答中的个人信息已替换为示例数据。支持本地会话，另有 SSH/串口连接入口；后两项尚未完成实机验收。使用步骤见 [MVP 使用说明](mvp/README.md)，运行效果和单流实测见 [MVP 实测报告](MVP_REPORT.md)。
+上图为脱敏演示，终端和回答中的个人信息已替换为示例数据。支持本地会话，另有 SSH/串口连接入口；后两项尚未完成实机验收。使用步骤见 [MVP 使用说明](mvp/README.md)。
 
 ## 功能与架构
 
@@ -40,7 +40,6 @@
 ├── requirements.txt
 ├── mvp/                         # 独立可运行单机版，见 mvp/README.md
 ├── assets/mvp-demo.png           # 脱敏效果图
-├── MVP_REPORT.md                 # 运行效果与单流测速记录
 ├── backend/
 │   ├── manage.py
 │   ├── config/                  # Django Project / 根路由 / ASGI / WSGI
